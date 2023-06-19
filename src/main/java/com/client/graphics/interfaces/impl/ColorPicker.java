@@ -199,11 +199,11 @@ public class ColorPicker {
 	public void draw(int x, int y) {
 		if(selectionCircle == null || pickerCircle == null || selectionBg == null)
 			regenerateSprites();
-		if(currentBrightness != Rasterizer3D.currentBrightness) {
+		/*if(currentBrightness != Rasterizer3D.currentBrightness) {
 			currentBrightness = Rasterizer3D.currentBrightness;
 			regenerateSprites();
 			grabColor();
-		}
+		}*/
 		lastDrawX = x;
 		lastDrawY = y;
 		int baseX = x + 5;
@@ -361,7 +361,7 @@ public class ColorPicker {
 					double percent = 1 - (distance / radius);
 					int overlayRGB = (((int) (255 * percent) << 24)) | ColourUtils.adjustBrightness(0x00FFFFFF, brightness);
 					
-					rgb = ColourUtils.exponent(rgb, Rasterizer3D.currentBrightness);
+					rgb = ColourUtils.exponent(rgb, 100);
 					//overlayRGB = ColourUtils.exponent(ColourUtils.adjustBrightness(overlayRGB, brightness), Rasterizer3D.currentBrightness);
 					rgb |= 0xFF000000;
 					image.setRGB(x + radius, y + radius, rgb);

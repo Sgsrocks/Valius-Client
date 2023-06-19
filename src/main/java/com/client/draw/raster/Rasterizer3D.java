@@ -199,7 +199,7 @@ public final class Rasterizer3D extends Raster {
         texturesPixelBuffer = new int[textureAmount][];
         textureLastUsed = new int[textureAmount];
         currentPalette = new int[textureAmount][];
-        
+
         for (int index = 0; index < textureAmount; index++) {
             try {
                 textures[index] = new Background(spriteLoader.cache[index]);
@@ -3907,15 +3907,16 @@ public final class Rasterizer3D extends Raster {
             var17 -= var15;
 
             final int FOV = (aBoolean1464 ? fieldOfView : 512);
-            int var24 = (var11 * var12 - var14 * var9) * Rasterizer3D.fieldOfView << 5;
-            int var38 = (var14 * var15 - var17 * var12) << 8;
-            int var25 = (var17 * var9 - var11 * var15) << 5;
-            int var36 = (var10 * var12 - var13 * var9) * Rasterizer3D.fieldOfView << 5;
-            int var39 = (var13 * var15 - var16 * var12)  << 8;
-            int var37 = (var16 * var9 - var10 * var15)  << 5;
-            int var33 = (var13 * var11 - var10 * var14) * Rasterizer3D.fieldOfView << 5;
-            int var40 = (var16 * var14 - var13 * var17)  << 8;
-            int var34 = (var10 * var17 - var16 * var11)  << 5;
+            int var24 = var11 * var12 - var14 * var9 << 14;
+            int var38 = (int)(((long)(var14 * var15 - var17 * var12) << 3 << 14) / (long)FOV);
+            int var25 = (int)(((long)(var17 * var9 - var11 * var15) << 14) / (long)FOV);
+            int var36 = var10 * var12 - var13 * var9 << 14;
+            int var39 = (int)(((long)(var13 * var15 - var16 * var12) << 3 << 14) / (long)FOV);
+            int var37 = (int)(((long)(var16 * var9 - var10 * var15) << 14) / (long)FOV);
+            int var33 = var13 * var11 - var10 * var14 << 14;
+            int var40 = (int)(((long)(var16 * var14 - var13 * var17) << 3 << 14) / (long)FOV);
+            int var34 = (int)(((long)(var10 * var17 - var16 * var11) << 14) / (long)FOV);
+
 
 
 

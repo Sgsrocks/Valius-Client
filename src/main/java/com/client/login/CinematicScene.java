@@ -82,9 +82,9 @@ public class CinematicScene {
 				Vector3.of(3345, 2723, 0),
 				Vector3.of(2906, 5202, 0),
 				Vector3.of(1620, 11538, 2),
-				Vector3.of(3498, 2972, 0),/*
-				Vector3.of(1600, 3952, 0),
-				Vector3.of(1634, 3676, 0),
+				Vector3.of(3498, 2972, 0),
+				Vector3.of(2018, 5937, 0),
+				Vector3.of(3357, 11477, 0),/*
 				Vector3.of(1750, 3597, 0),
 				Vector3.of(1415, 3520, 0),*/
 				};
